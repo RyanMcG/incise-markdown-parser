@@ -11,7 +11,7 @@
    :abbreviations
    :tables
    :definition-lists
-   :smarts
+   :strikethrough
    :smartypants])
 
 (defn get-extensions []
