@@ -10,7 +10,7 @@
 (use-fixtures :once (custom-config-fixturer :in-dir "resources/test"
                                             :out-dir "/tmp"))
 
-(def ^:private parse (comp slurp first force (html-parser markdown-to-html)))
+(def ^:private parse (comp slurp first force parser))
 
 (defn- result [] (parse (file (resource "test/markdown-options.md"))))
 

@@ -14,10 +14,12 @@
    :strikethrough
    :smartypants])
 
-(defn get-extensions []
+(defn- get-extensions []
   (conf/get-in [:parsers :markdown :extensions] default-extensions))
 
-(defn markdown-to-html [markdown-str]
+(defn- markdown-to-html [markdown-str]
   (md/to-html markdown-str (get-extensions)))
 
-(pc/register [:md :markdown] (html-parser markdown-to-html))
+(def parser (html-parser markdown-to-html))
+
+(pc/register [:md :markdown] #'parser)
