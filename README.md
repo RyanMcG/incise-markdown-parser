@@ -1,4 +1,4 @@
-# incise-markdown-parsers
+# incise-markdown-parsers [![Build Status](https://travis-ci.org/RyanMcG/incise-markdown-parser.svg?branch=master)](https://travis-ci.org/RyanMcG/incise-markdown-parser)
 
 The default markdown parser included in [incise][].
 
